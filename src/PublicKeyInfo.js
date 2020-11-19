@@ -278,7 +278,7 @@ export default class PublicKeyInfo
 		
 		//region Export public key
 		sequence = sequence.then(() =>
-			crypto.exportKey("spki", publicKey));
+			crypto.subtle.exportKey("spki", publicKey));
 		//endregion
 		
 		//region Initialize internal variables by parsing exported value
